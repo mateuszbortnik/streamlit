@@ -1,6 +1,6 @@
 
-pandas-dev
-plotly-dev
-pandas_profiling-dev
-streamlit_pandas_profiling-dev
-sklearn-dev
+pandas
+plotly
+pandas_profiling
+streamlit_pandas_profiling
+sklearn
