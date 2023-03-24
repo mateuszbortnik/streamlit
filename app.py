@@ -2,8 +2,8 @@ import streamlit as sl
 import pandas as pd
 import plotly
 pd.options.plotting.backend = "plotly"
-import pandas_profiling
-from streamlit_pandas_profiling import st_profile_report
+# import pandas_profiling
+# from streamlit_pandas_profiling import st_profile_report
 import sklearn
 
 sl.title('Dashboard MTR')
