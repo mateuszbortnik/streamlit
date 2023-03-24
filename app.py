@@ -7,7 +7,7 @@ pd.options.plotting.backend = "plotly"
 import sklearn
 
 sl.title('Dashboard MTR')
-df = pd.read_csv("C:/Users/User/Desktop/Dashboards/Streamlit/navex2.csv")
+df = pd.read_csv("navex2.csv")
 sl.write(df)
 
 
