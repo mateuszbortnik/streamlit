@@ -5,7 +5,7 @@ from google.oauth2 import service_account
 from gsheetsdb import connect
 import pandas as pd
 
-st.set_page_config(page_title = 'Facebook Ad Campaign Dashboard',
+st.set_page_config(page_title = 'Streamlit Demo Dashboard',
                     layout='wide',
                     initial_sidebar_state='collapsed')
 
@@ -28,6 +28,8 @@ def run_query(query):
 
 sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+st.title("Streamlit Demo Dashboard)
 
 # # Print results.
 # for row in rows:
