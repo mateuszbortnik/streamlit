@@ -44,7 +44,7 @@ import datetime
 st.title("Date range")
 
 min_date = datetime.datetime(2020,1,1)
-max_date = datetime.date(2022,1,1)
+max_date = datetime.date(2024,1,1)
 
 a_date = st.date_input("Pick a date", min_value=min_date, max_value=max_date)
 
