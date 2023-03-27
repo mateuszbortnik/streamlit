@@ -50,4 +50,4 @@ start_date, end_date = st.select_slider(
 
 
 
-st.line_chart(df)
+st.line_chart(df, x='Year_and_month', y='Facebook Ads Spend Total')
