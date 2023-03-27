@@ -45,6 +45,6 @@ st.title("Date range")
 
 start_date, end_date = st.select_slider(
     'Select a date range',
-    options=df['Year and month'],
+    options=df['Year_and_month'],
     value=('2021|01', '2022|12'))
 st.write('You selected wavelengths between', start_date, 'and', end_date)
