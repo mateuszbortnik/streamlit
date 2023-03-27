@@ -1,27 +1,29 @@
-import streamlit as sl
-import pandas as pd
-import plotly
-pd.options.plotting.backend = "plotly"
-# import pandas_profiling
-# from streamlit_pandas_profiling import st_profile_report
-import sklearn
+# streamlit_app.py
 
-sl.title('Dashboard MTR')
-df = pd.read_csv("navex2.csv")
-sl.write(df)
+import streamlit as st
+from google.oauth2 import service_account
+from gsheetsdb import connect
 
+# Create a connection object.
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=[
+        "https://www.googleapis.com/auth/spreadsheets",
+    ],
+)
+conn = connect(credentials=credentials)
 
-options = sl.multiselect(
-    'Variables',
-df.keys())
+# Perform SQL query on the Google Sheet.
+# Uses st.cache_data to only rerun when the query changes or after 10 min.
+@st.cache_data(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    rows = rows.fetchall()
+    return rows
 
-col1, col2 = sl.columns(2)
-with col1:
-    sl.line_chart(df, x='Data', y=options)
-    sl.bar_chart(df, x='Data', y=options)
+sheet_url = st.secrets["private_gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-with col2:
-    sl.area_chart(df, x='Data', y=options)  
-
-
-sl.balloons()
+# Print results.
+for row in rows:
+    st.write(f"{row.name} has a :{row.pet}:")
