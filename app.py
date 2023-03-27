@@ -40,4 +40,13 @@ options = st.multiselect(
     'Select variables',
 df.keys())
 
-st.write('You selected:', options)
+import datetime
+st.title("Date range")
+
+min_date = datetime.datetime(2020,1,1)
+max_date = datetime.date(2022,1,1)
+
+a_date = st.date_input("Pick a date", min_value=min_date, max_value=max_date)
+
+##this uses streamlit 'magic'!!!! 
+"The date selected:", a_date
