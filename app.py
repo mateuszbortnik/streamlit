@@ -50,4 +50,4 @@ start_date, end_date = st.select_slider(
 
 
 
-st.line_chart(data=df, 'Year_and_month', df.keys())
+st.line_chart(df)
