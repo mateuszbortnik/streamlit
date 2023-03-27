@@ -35,3 +35,9 @@ st.title("Streamlit Demo Dashboard")
 # for row in rows:
 df = pd.DataFrame(data=rows)
 df
+
+options = st.multiselect(
+    'Select variables',
+df.keys())
+
+st.write('You selected:', options)
