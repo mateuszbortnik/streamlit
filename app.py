@@ -43,10 +43,8 @@ df.keys())
 import datetime
 st.title("Date range")
 
-min_date = datetime.datetime(2020,1,1).strftime('%b/%d/%Y')
-max_date = datetime.date(2024,1,1)
-
-a_date = st.date_input("Pick a date", min_value=min_date, max_value=max_date)
-
-##this uses streamlit 'magic'!!!! 
-"The date selected:", a_date
+start_date, end_date = st.select_slider(
+    'Select a date range',
+    options=df['Year and month'],
+    value=('2021|01', '2022|12'))
+st.write('You selected wavelengths between', start_date, 'and', end_date)
