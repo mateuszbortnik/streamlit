@@ -46,18 +46,20 @@ col1, col2, col3 = st.columns(3)
   
 headers = df.keys()
 headers = headers[2:]
-with col1:  
-  options = st.multiselect(
-      'Select variables',
-  headers,
-  headers[0])
-  st.text("")
+with col1:
+  with st.container():
+    options = st.multiselect(
+        'Select variables',
+    headers,
+    headers[0])
+
 with col2:
 # Create a date slider
-  min_date = df['Date'].min()
-  max_date = df['Date'].max()
-  start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
-  st.text("")
+  with st.container():
+    min_date = df['Date'].min()
+    max_date = df['Date'].max()
+    start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
+
 # Filter the dataset based on the date slider values
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 with col1:
