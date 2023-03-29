@@ -36,18 +36,20 @@ st.title("Streamlit Demo Dashboard")
 df = pd.DataFrame(data=rows)
 df = df.iloc[: , :5]
 
-options = st.multiselect(
-    'Select variables',
-df.keys())
+
 
 #----------------------------------------------------------
 
 col1, col2 = st.columns(2)
 
 with col1:
+  
   # Create a title and a brief description
   st.title("Line Chart with Date Slider Control")
-  st.write("This is a line chart with a date slider control in Streamlit using a CSV dataset.")
+  
+  options = st.multiselect(
+    'Select variables',
+df.keys())
 
   # Create a date slider
   min_date = df['Date'].min()
