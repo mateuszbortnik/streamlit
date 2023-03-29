@@ -47,7 +47,7 @@ col1, col2, col3 = st.columns(3)
 headers = df.keys()
 headers = headers[2:]
   
-col1.options = st.multiselect(
+options = st.multiselect(
     'Select variables',
 headers,
 headers[0])
@@ -60,7 +60,7 @@ start_date, end_date = st.slider("Select a date range", min_date, max_date, (min
 # Filter the dataset based on the date slider values
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
-st.metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
+col1.st.metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
   
   # Plot the line chart
 st.line_chart(filtered_data, x='Date', y=options)
