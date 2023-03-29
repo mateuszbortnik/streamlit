@@ -60,4 +60,4 @@ with col1:
   # Plot the line chart
   st.line_chart(filtered_data, x='Year_and_month', y='Facebook_Ads_Spend_Total')
 
-
+with col2:
