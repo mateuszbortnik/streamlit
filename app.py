@@ -5,9 +5,9 @@ from google.oauth2 import service_account
 from gsheetsdb import connect
 import pandas as pd
 
-# st.set_page_config(page_title = 'Streamlit Demo Dashboard',
-#                     layout='wide',
-#                     initial_sidebar_state='collapsed')
+st.set_page_config(page_title = 'Streamlit Demo Dashboard',
+                    layout='wide',
+                    initial_sidebar_state='collapsed')
 
 # Create a connection object.
 credentials = service_account.Credentials.from_service_account_info(
@@ -40,7 +40,7 @@ df = df.iloc[: , :5]
 
 #----------------------------------------------------------
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
   
