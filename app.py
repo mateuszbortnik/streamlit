@@ -5,9 +5,9 @@ from google.oauth2 import service_account
 from gsheetsdb import connect
 import pandas as pd
 
-st.set_page_config(page_title = 'Streamlit Demo Dashboard',
-                    layout='wide',
-                    initial_sidebar_state='collapsed')
+# st.set_page_config(page_title = 'Streamlit Demo Dashboard',
+#                     layout='wide',
+#                     initial_sidebar_state='collapsed')
 
 # Create a connection object.
 credentials = service_account.Credentials.from_service_account_info(
