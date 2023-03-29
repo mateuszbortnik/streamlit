@@ -44,10 +44,6 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
   
- 
-  
-  # Create a title and a brief description
-  st.title("Line Chart with Date Slider Control")
   
   headers = df.keys()
   headers = headers[2:]
@@ -56,7 +52,7 @@ with col1:
     'Select variables',
   headers,
   headers[0])
-
+with col2:
   # Create a date slider
   min_date = df['Date'].min()
   max_date = df['Date'].max()
