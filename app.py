@@ -52,7 +52,8 @@ with col1:
   
   options = st.multiselect(
     'Select variables',
-  headers)
+  headers,
+  headers[0])
 
   # Create a date slider
   min_date = df['Date'].min()
