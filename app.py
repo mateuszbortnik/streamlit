@@ -42,7 +42,7 @@ df.keys())
 
 #----------------------------------------------------------
 
-col1, col2 = sl.columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
   # Create a title and a brief description
