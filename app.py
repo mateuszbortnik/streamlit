@@ -49,12 +49,12 @@ st.title("Line Chart with Date Slider Control")
 st.write("This is a line chart with a date slider control in Streamlit using a CSV dataset.")
 
 # Create a date slider
-min_date = df['Year_and_month'].min()
-max_date = df['Year_and_month'].max()
+min_date = df['Date'].min()
+max_date = df['Date'].max()
 start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
 
 # Filter the dataset based on the date slider values
-filtered_data = df[(df['Year_and_month'] >= start_date) & (df['Year_and_month'] <= end_date)]
+filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
 # Plot the line chart
 st.line_chart(filtered_data)
