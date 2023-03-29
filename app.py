@@ -34,20 +34,29 @@ st.title("Streamlit Demo Dashboard")
 # # Print results.
 # for row in rows:
 df = pd.DataFrame(data=rows)
-df
+df = df.iloc[: , :5]
 
 options = st.multiselect(
     'Select variables',
 df.keys())
 
-import datetime
-st.title("Date range")
-
-start_date, end_date = st.select_slider(
-    'Select a date range',
-    options=df['Year_and_month'],
-    value=('2021|01', '2022|12'))
+#----------------------------------------------------------
 
 
 
-st.line_chart(df, x='Year_and_month', y='Facebook_Ads_Spend_Total')
+# Create a title and a brief description
+st.title("Line Chart with Date Slider Control")
+st.write("This is a line chart with a date slider control in Streamlit using a CSV dataset.")
+
+# Create a date slider
+min_date = df['Year_and_month'].min()
+max_date = df['Year_and_month'].max()
+start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
+
+# Filter the dataset based on the date slider values
+filtered_data = df[(df['Year_and_month'] >= start_date) & (df['Year_and_month'] <= end_date)]
+
+# Plot the line chart
+st.line_chart(filtered_data)
+
+
