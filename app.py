@@ -42,21 +42,22 @@ df.keys())
 
 #----------------------------------------------------------
 
+col1, col2 = sl.columns(2)
 
+with col1:
+  # Create a title and a brief description
+  st.title("Line Chart with Date Slider Control")
+  st.write("This is a line chart with a date slider control in Streamlit using a CSV dataset.")
 
-# Create a title and a brief description
-st.title("Line Chart with Date Slider Control")
-st.write("This is a line chart with a date slider control in Streamlit using a CSV dataset.")
+  # Create a date slider
+  min_date = df['Date'].min()
+  max_date = df['Date'].max()
+  start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
 
-# Create a date slider
-min_date = df['Date'].min()
-max_date = df['Date'].max()
-start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
+  # Filter the dataset based on the date slider values
+  filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
-# Filter the dataset based on the date slider values
-filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
-
-# Plot the line chart
-st.line_chart(filtered_data, x='Year_and_month', y='Facebook_Ads_Spend_Total')
+  # Plot the line chart
+  st.line_chart(filtered_data, x='Year_and_month', y='Facebook_Ads_Spend_Total')
 
 
