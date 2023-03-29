@@ -61,7 +61,7 @@ with col2:
   # Filter the dataset based on the date slider values
   filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
-  st.metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
+col1.st.metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
   
   # Plot the line chart
   st.line_chart(filtered_data, x='Date', y=options)
