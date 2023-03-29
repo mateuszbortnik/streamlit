@@ -63,7 +63,7 @@ with col1:
   filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
   # Plot the line chart
-  st.line_chart(filtered_data, x='Year_and_month', y=options)
+  st.line_chart(filtered_data, x='Year_and_month', y=headers)
 
 with col2:
   st.text("col2")
