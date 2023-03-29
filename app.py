@@ -46,13 +46,13 @@ col1, col2, col3 = st.columns(3)
   
 headers = df.keys()
 headers = headers[2:]
-with col1:
+with col3:
   options = st.multiselect(
       'Select variables',
   headers,
   headers[0])
   st.text("")
-with col3:
+
 # Create a date slider
   min_date = df['Date'].min()
   max_date = df['Date'].max()
