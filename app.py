@@ -34,7 +34,7 @@ st.title("Streamlit Demo Dashboard")
 # # Print results.
 # for row in rows:
 df = pd.DataFrame(data=rows)
-df = df.iloc[: , :5]
+# df = df.iloc[: , :5]
 
 
 
