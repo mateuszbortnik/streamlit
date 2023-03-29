@@ -48,11 +48,11 @@ with col1:
   st.title("Line Chart with Date Slider Control")
   
   headers = df.keys()
-headers = headers[2:]
+  headers = headers[2:]
   
   options = st.multiselect(
     'Select variables',
-headers)
+  headers)
 
   # Create a date slider
   min_date = df['Date'].min()
