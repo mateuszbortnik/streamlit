@@ -51,12 +51,13 @@ with col1:
       'Select variables',
   headers,
   headers[0])
+  st.empty
 with col2:
 # Create a date slider
   min_date = df['Date'].min()
   max_date = df['Date'].max()
   start_date, end_date = st.slider("Select a date range", min_date, max_date, (min_date, max_date))
-
+  st.empty
 # Filter the dataset based on the date slider values
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 with col1:
