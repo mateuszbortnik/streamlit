@@ -57,6 +57,6 @@ start_date, end_date = st.slider("Select a date range", min_date, max_date, (min
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
 # Plot the line chart
-st.line_chart(filtered_data, x='Date', y='Facebook_Ads_Spend_Total')
+st.line_chart(filtered_data, x='Year_and_month', y='Facebook_Ads_Spend_Total')
 
 
