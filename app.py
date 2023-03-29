@@ -65,5 +65,5 @@ with col1:
   # Plot the line chart
   st.line_chart(filtered_data, x='Date', y=options)
 
-with col2:
+# with col2:
   st.metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_Total'].sum().round(decimals=2))
