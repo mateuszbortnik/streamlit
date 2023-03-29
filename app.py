@@ -52,7 +52,7 @@ with col1:
   headers,
   headers[0])
   st.text("")
-with col2:
+with col3:
 # Create a date slider
   min_date = df['Date'].min()
   max_date = df['Date'].max()
