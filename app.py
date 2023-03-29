@@ -61,3 +61,4 @@ with col1:
   st.line_chart(filtered_data, x='Year_and_month', y='Facebook_Ads_Spend_Total')
 
 with col2:
+  st.text("col2")
