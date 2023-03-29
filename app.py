@@ -44,7 +44,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
   
-  st.metric(label="Revenue", value=df['Google_Ads_Revenue_Total'].sum())
+  st.metric(label="Revenue", value=filtered_data['Google_Ads_Revenue_Total'].sum())
   
   # Create a title and a brief description
   st.title("Line Chart with Date Slider Control")
