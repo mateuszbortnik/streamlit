@@ -133,3 +133,6 @@ fig4.add_trace(
         z = np.array(df_corr)
     )
 )
+
+mygrid[4][3].plotly_chart(fig4, theme="streamlit")
+
