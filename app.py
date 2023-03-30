@@ -47,7 +47,7 @@ col1, col2, col3 = st.columns(3)
 headers = df.keys()
 headers = headers[2:]
 
-options = st.multiselect(
+options = col1.multiselect(
     'Select variables',
 headers,
 headers[0])
