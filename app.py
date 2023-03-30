@@ -122,3 +122,12 @@ mygrid[4][2].plotly_chart(fig3, theme="streamlit")
 
 df_corr = filtered_data.corr()
 df_corr
+
+fig4 = go.Figure()
+fig4.add_trace(
+    go.Heatmap(
+        x = df_corr.columns,
+        y = df_corr.index,
+        z = np.array(df_corr)
+    )
+)
