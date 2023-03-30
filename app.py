@@ -134,5 +134,5 @@ fig4.add_trace(
     )
 )
 
-mygrid[4][3].plotly_chart(fig4, theme="streamlit")
+mygrid[4][3].plotly_chart(fig4)
 
