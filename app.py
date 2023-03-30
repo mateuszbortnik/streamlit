@@ -122,18 +122,20 @@ mygrid[4][0].plotly_chart(fig, theme="streamlit")
 mygrid[4][1].plotly_chart(fig2, theme="streamlit")
 mygrid[4][2].plotly_chart(fig3, theme="streamlit")
 
-df_corr = filtered_data.iloc[: , :10].corr()
-df_corr
+# df_corr = filtered_data.iloc[: , :10].corr()
+# df_corr
 
-fig4 = go.Figure(aspect="auto")
-fig4.add_trace(
-    go.Heatmap(
-        x = df_corr.columns,
-        y = df_corr.index,
-        z = np.array(df_corr)
-    )
-)
+# fig4 = go.Figure()
+# fig4.add_trace(
+#     go.Heatmap(
+#         x = df_corr.columns,
+#         y = df_corr.index,
+#         z = np.array(df_corr)
+#     )
+# )
 
 # st.plotly_chart(fig4, theme="streamlit")
 
-
+fig4, ax = plt.subplots()
+sns.heatmap(filtered_data.corr(), ax=ax)
+st.write(fig4)
