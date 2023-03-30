@@ -77,4 +77,4 @@ mygrid[2][0].metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Reven
   
 mygrid[2][1].metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_Total'].sum().round(decimals=2))
 
-mygrid[3][2].metric(label="Conversions", value=filtered_data['Google_Analytics_Goal_completions_Total'].sum().round(decimals=0))
+mygrid[2][2].metric(label="Conversions", value=filtered_data['Google_Analytics_Goal_completions_Total'].sum().round(decimals=0))
