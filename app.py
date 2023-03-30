@@ -51,7 +51,7 @@ def make_grid(cols,rows):
             grid[i] = st.columns(rows)
     return grid
   
-mygrid = make_grid(5,3)
+mygrid = make_grid(7,3)
   
 headers = df.keys()
 headers = headers[2:]
