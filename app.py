@@ -100,5 +100,5 @@ fig.update_layout(legend=dict(
     xanchor="right",
     x=1
 ))
-mygrid[4][0].plotly_chart(fig, theme="streamlit")
+mygrid[4][0].plotly_chart(fig)
 mygrid[4][1].plotly_chart(fig, theme="streamlit")
