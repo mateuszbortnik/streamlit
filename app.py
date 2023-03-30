@@ -40,14 +40,19 @@ df = pd.DataFrame(data=rows)
 
 #----------------------------------------------------------
 
-col1, col2 = st.columns(2)
+# col1, col2 = st.columns(2)
 
-  
+def make_grid(cols,rows):
+    grid = [0]*cols
+    for i in range(cols):
+        with st.container():
+            grid[i] = st.columns(rows)
+    return grid
   
 headers = df.keys()
 headers = headers[2:]
 
-options = col1.multiselect(
+options = multiselect(
     'Select variables',
 headers,
 headers[0])
@@ -56,7 +61,7 @@ st.text("")
 # Create a date slider
 min_date = df['Date'].min()
 max_date = df['Date'].max()
-start_date, end_date = col2.slider("Select a date range", min_date, max_date, (min_date, max_date))
+start_date, end_date = mygrid[0][0].slider("Select a date range", min_date, max_date, (min_date, max_date))
 
 # Filter the dataset based on the date slider values
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
