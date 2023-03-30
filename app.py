@@ -84,7 +84,7 @@ mygrid[3][2].line_chart(filtered_data, x='Date', y='Google_Analytics_Goal_comple
 
 import plotly.express as px
 
-fig = px.bar(df, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Revenue by channel")
+fig = px.bar(filtered_data, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Revenue by channel")
 
 
 fig.update_layout(legend=dict(
@@ -95,7 +95,7 @@ fig.update_layout(legend=dict(
     x=1
 ))
 
-fig2 = px.bar(df, x="Date", y=["Google_Ads_Spend_Total", "Facebook_Ads_Spend_Total"], title="Spend by channel")
+fig2 = px.bar(filtered_data, x="Date", y=["Google_Ads_Spend_Total", "Facebook_Ads_Spend_Total"], title="Spend by channel")
 
 fig2.update_layout(legend=dict(
     orientation="h",
