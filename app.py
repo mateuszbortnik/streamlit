@@ -81,3 +81,7 @@ mygrid[2][2].metric(label="Conversions", value=filtered_data['Google_Analytics_G
 mygrid[3][0].line_chart(filtered_data, x='Date', y='Google_Ads_Revenue_Total')
 mygrid[3][1].line_chart(filtered_data, x='Date', y='Google_Ads_Spend_Total')
 mygrid[3][2].line_chart(filtered_data, x='Date', y='Google_Analytics_Goal_completions_Total')
+
+import plotly.express as px
+
+fig = px.bar(df, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Wide-Form Input")
