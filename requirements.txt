@@ -5,3 +5,4 @@ pandas==1.5.0
 matplotlib==3.6.0
 plotly==5.13.1
 gsheetsdb==0.1.13.1
+seaborn==0.12.2
