@@ -86,11 +86,19 @@ import plotly.express as px
 
 fig = px.bar(df, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Wide-Form Input")
 
+# fig.update_layout(legend=dict(
+#     yanchor="top",
+#     y=0.99,
+#     xanchor="left",
+#     x=0.01
+# ))
+# mygrid[4][0].plotly_chart(fig, theme="streamlit", use_container_width=True)
+# mygrid[4][1].plotly_chart(fig, theme="streamlit")
+
 fig.update_layout(legend=dict(
-    yanchor="top",
-    y=0.99,
-    xanchor="left",
-    x=0.01
+    orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1
 ))
-mygrid[4][0].plotly_chart(fig, theme="streamlit", use_container_width=True)
-mygrid[4][1].plotly_chart(fig, theme="streamlit")
