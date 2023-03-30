@@ -106,6 +106,16 @@ fig2.update_layout(legend=dict(
 ))
 
 
+fig3 = px.bar(filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], title="Spend by channel")
+
+fig3.update_layout(legend=dict(
+    orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1
+))
+
 mygrid[4][0].plotly_chart(fig, theme="streamlit")
 mygrid[4][1].plotly_chart(fig2, theme="streamlit")
 
