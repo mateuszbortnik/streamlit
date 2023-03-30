@@ -86,3 +86,4 @@ import plotly.express as px
 
 fig = px.bar(df, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Wide-Form Input")
 mygrid[4][0].plotly_chart(fig, theme="streamlit")
+mygrid[4][1].plotly_chart(fig, theme="streamlit")
