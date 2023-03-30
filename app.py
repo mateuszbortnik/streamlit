@@ -122,7 +122,7 @@ mygrid[4][0].plotly_chart(fig, theme="streamlit")
 mygrid[4][1].plotly_chart(fig2, theme="streamlit")
 mygrid[4][2].plotly_chart(fig3, theme="streamlit")
 
-df_corr = filtered_data.corr()
+df_corr = filtered_data.iloc[: , :5].corr()
 df_corr
 
 fig4 = go.Figure()
