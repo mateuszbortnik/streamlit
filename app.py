@@ -40,7 +40,7 @@ df = pd.DataFrame(data=rows)
 
 #----------------------------------------------------------
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
   
   
@@ -56,7 +56,7 @@ st.text("")
 # Create a date slider
 min_date = df['Date'].min()
 max_date = df['Date'].max()
-start_date, end_date = container.slider("Select a date range", min_date, max_date, (min_date, max_date))
+start_date, end_date = col2.slider("Select a date range", min_date, max_date, (min_date, max_date))
 
 # Filter the dataset based on the date slider values
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
