@@ -6,6 +6,7 @@ from gsheetsdb import connect
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
+import matplotlib.pyplot as plt
 
 st.set_page_config(page_title = 'Streamlit Demo Dashboard',
                     layout='wide',
