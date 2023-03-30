@@ -54,10 +54,10 @@ mygrid = make_grid(3,3)
 headers = df.keys()
 headers = headers[2:]
 
-options = mygrid[0][1].multiselect(
-    'Select variables',
-headers,
-headers[0])
+# options = mygrid[0][1].multiselect(
+#     'Select variables',
+# headers,
+# headers[0])
 
 
 # Create a date slider
@@ -71,7 +71,7 @@ filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
 mygrid[2][0].metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
   # Plot the line chart
-st.line_chart(filtered_data, x='Date', y=options)
+# st.line_chart(filtered_data, x='Date', y=options)
 
 
   
