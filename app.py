@@ -52,7 +52,7 @@ def make_grid(cols,rows):
 headers = df.keys()
 headers = headers[2:]
 
-options = mygrid[0][1]multiselect(
+options = mygrid[0][1].multiselect(
     'Select variables',
 headers,
 headers[0])
