@@ -134,5 +134,5 @@ fig4.add_trace(
     )
 )
 
-mygrid[5][0].plotly_chart(fig4)
+st.plotly_chart(fig4)
 
