@@ -106,7 +106,7 @@ fig2.update_layout(legend=dict(
 ))
 
 
-fig3 = px.bar(filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], title="Spend by channel")
+fig3 = px.bar(filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], title="Conversions by channel")
 
 fig3.update_layout(legend=dict(
     orientation="h",
