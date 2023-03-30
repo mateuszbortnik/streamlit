@@ -58,7 +58,7 @@ options = mygrid[0][1].multiselect(
     'Select variables',
 headers,
 headers[0])
-st.text("")
+
 
 # Create a date slider
 min_date = df['Date'].min()
