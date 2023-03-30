@@ -134,5 +134,6 @@ fig4.add_trace(
     )
 )
 
-st.plotly_chart(fig4, theme="streamlit")
+# st.plotly_chart(fig4, theme="streamlit")
+fig4.show()
 
