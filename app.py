@@ -118,4 +118,4 @@ fig3.update_layout(legend=dict(
 
 mygrid[4][0].plotly_chart(fig, theme="streamlit")
 mygrid[4][1].plotly_chart(fig2, theme="streamlit")
-
+mygrid[4][2].plotly_chart(fig3, theme="streamlit")
