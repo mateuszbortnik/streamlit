@@ -69,10 +69,10 @@ start_date, end_date = mygrid[0][0].slider("Select a date range", min_date, max_
 filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
 
 
-revenue=st.metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
+mygrid[2][0].metric(label="Revenue (USD)", value=filtered_data['Google_Ads_Revenue_Total'].sum().round(decimals=2))
   # Plot the line chart
 st.line_chart(filtered_data, x='Date', y=options)
 
 
   
-st.metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_Total'].sum().round(decimals=2))
+mygrid[2][1].metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_Total'].sum().round(decimals=2))
