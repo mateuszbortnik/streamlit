@@ -125,7 +125,7 @@ mygrid[4][2].plotly_chart(fig3, theme="streamlit")
 df_corr = filtered_data.iloc[: , :10].corr()
 df_corr
 
-fig4 = go.Figure()
+fig4 = go.Figure(aspect="auto")
 fig4.add_trace(
     go.Heatmap(
         x = df_corr.columns,
@@ -135,5 +135,5 @@ fig4.add_trace(
 )
 
 # st.plotly_chart(fig4, theme="streamlit")
-fig4.show()
+
 
