@@ -41,13 +41,13 @@ df = pd.DataFrame(data=rows)
 #----------------------------------------------------------
 
 col1, col2, col3 = st.columns(3)
-container = st.container()
+
   
   
 headers = df.keys()
 headers = headers[2:]
 
-options = col1.container.multiselect(
+options = col1.multiselect(
     'Select variables',
 headers,
 headers[0])
