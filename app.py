@@ -150,11 +150,11 @@ fd_long = pd.melt(fd2, id_vars=['Date', 'Year_and_month'])
 
 st.write(fd_long)
 
-# bc = alt.Chart(fd_long).mark_point().encode(
-#     x='Google_Ads_Spend_Total',
-#     y='Google_Ads_Revenue_Total',
-#     color='Origin',
-# ).interactive()
+bc = alt.Chart(fd_long).mark_point().encode(
+    x='Google_Ads_Spend_Total',
+    y='Google_Ads_Revenue_Total',
+    color='Origin',
+).interactive()
 
 
-# mygrid[5][0].altair_chart(bc, use_container_width=False)
+mygrid[5][0].altair_chart(bc, use_container_width=False)
