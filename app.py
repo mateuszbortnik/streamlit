@@ -144,7 +144,9 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
 
-fd_long = pd.melt(filtered_data, id_vars='Date', value_name=filtered_data.keys())
+fd2=filtered_data.reset_index()
+
+fd_long = pd.melt(fd2, id_vars='Date', value_name=filtered_data.keys())
 
 st.write(fd_long)
 
