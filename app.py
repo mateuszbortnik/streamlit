@@ -149,6 +149,6 @@ bc = alt.Chart(filtered_data).mark_point().encode(
     y='Google_Ads_Revenue_Total',
     color='Origin',
 ).interactive()
-)
+
 
 mygrid[5][0].altair_chart(bc, use_container_width=False)
