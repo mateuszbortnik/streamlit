@@ -144,10 +144,11 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
 
-bc = alt.Chart(filtered_data).mark_bar().encode(
-    x='Year_and_month',
-    y='sum(yield)',
-    color='site'
+bc = alt.Chart(filtered_data).mark_point().encode(
+    x='Google_Ads_Spend_Total',
+    y='Google_Ads_Revenue_Total',
+    color='Origin',
+).interactive()
 )
 
 mygrid[5][0].altair_chart(bc, use_container_width=False)
