@@ -138,6 +138,6 @@ mygrid[4][2].plotly_chart(fig3, theme="streamlit", use_container_width=True)
 
 # st.plotly_chart(fig4, theme="streamlit")
 
-fig4, ax = plt.subplots()
-sns.heatmap(filtered_data.corr(), ax=ax)
-st.write(fig4)
+# fig4, ax = plt.subplots()
+# sns.heatmap(filtered_data.corr(), ax=ax)
+# st.write(fig4)
