@@ -88,42 +88,42 @@ mygrid[3][2].line_chart(filtered_data, x='Date', y='Google_Analytics_Goal_comple
 
 import plotly.express as px
 
-fig = px.bar(filtered_data, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Revenue by channel")
+# fig = px.bar(filtered_data, x="Date", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], title="Revenue by channel")
 
 
-fig.update_layout(legend=dict(
-    orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1
-))
+# fig.update_layout(legend=dict(
+#     orientation="h",
+#     yanchor="bottom",
+#     y=1.02,
+#     xanchor="right",
+#     x=1
+# ))
 
-fig2 = px.bar(filtered_data, x="Date", y=["Google_Ads_Spend_Total", "Facebook_Ads_Spend_Total"], title="Spend by channel")
+# fig2 = px.bar(filtered_data, x="Date", y=["Google_Ads_Spend_Total", "Facebook_Ads_Spend_Total"], title="Spend by channel")
 
-fig2.update_layout(legend=dict(
-    orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1
-))
+# fig2.update_layout(legend=dict(
+#     orientation="h",
+#     yanchor="bottom",
+#     y=1.02,
+#     xanchor="right",
+#     x=1
+# ))
 
 
-fig3 = px.bar(filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], title="Conversions by channel")
+# fig3 = px.bar(filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], title="Conversions by channel")
 
-fig3.update_layout(legend=dict(
-    orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1
-))
+# fig3.update_layout(legend=dict(
+#     orientation="h",
+#     yanchor="bottom",
+#     y=1.02,
+#     xanchor="right",
+#     x=1
+# ))
 
-mygrid[4][0].plotly_chart(fig, theme=None)
-mygrid[4][1].plotly_chart(fig2, theme="streamlit")
-mygrid[4][2].plotly_chart(fig3, theme="streamlit")
-mygrid[5][0].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], use_container_width=True)
+mygrid[4][0].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Revenue_Total", "Facebook_Ads_Revenue_Total"], use_container_width=True)
+mygrid[4][1].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Spend_Total", "Facebook_Ads_Spend_Total"], use_container_width=True)
+mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], use_container_width=True)
+
 
 
 # df_corr = filtered_data.iloc[: , :10].corr()
