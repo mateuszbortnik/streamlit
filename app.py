@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import altair as alt
 st.set_page_config(page_title = 'Streamlit Demo Dashboard',
                     layout='wide',
                     initial_sidebar_state='collapsed')
@@ -143,3 +143,11 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # fig4, ax = plt.subplots()
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
+
+bc = alt.Chart(filtered_data).mark_bar().encode(
+    x='Year_and_month',
+    y='sum(yield)',
+    color='site'
+)
+
+mygrid[5][0].altair_chart(bc, use_container_width=False, theme="streamlit")
