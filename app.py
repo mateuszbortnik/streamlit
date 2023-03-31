@@ -123,6 +123,8 @@ fig3.update_layout(legend=dict(
 mygrid[4][0].plotly_chart(fig, theme=None)
 mygrid[4][1].plotly_chart(fig2, theme="streamlit")
 mygrid[4][2].plotly_chart(fig3, theme="streamlit")
+st.bar_chart(data=filtered_data, x="Date", y=["Google_Ads_Conversions_Total", "Facebook_Ads_Conversions_Total"], use_container_width=True)
+
 
 # df_corr = filtered_data.iloc[: , :10].corr()
 # df_corr
