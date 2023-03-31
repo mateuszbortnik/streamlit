@@ -120,9 +120,9 @@ fig3.update_layout(legend=dict(
     x=1
 ))
 
-mygrid[4][0].plotly_chart(fig, theme=None, use_container_width=False)
-mygrid[4][1].plotly_chart(fig2, theme="streamlit", use_container_width=False)
-mygrid[4][2].plotly_chart(fig3, theme="streamlit", use_container_width=False)
+mygrid[4][0].plotly_chart(fig, theme=None)
+mygrid[4][1].plotly_chart(fig2, theme="streamlit")
+mygrid[4][2].plotly_chart(fig3, theme="streamlit")
 
 # df_corr = filtered_data.iloc[: , :10].corr()
 # df_corr
