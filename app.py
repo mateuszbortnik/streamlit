@@ -151,8 +151,8 @@ fd_long = pd.melt(fd2, id_vars=['Date', 'Year_and_month'])
 st.write(fd_long)
 
 bc = alt.Chart(fd_long).mark_point().encode(
-    x='Google_Ads_Spend_Total',
-    y='Google_Ads_Revenue_Total'
+    x='Google_Ads_Spend_Total:Q',
+    y='Google_Ads_Revenue_Total:Q'
 ).interactive()
 
 
