@@ -6,3 +6,4 @@ matplotlib==3.6.0
 plotly==5.13.1
 gsheetsdb==0.1.13.1
 seaborn==0.12.2
+altair==4.2.2
