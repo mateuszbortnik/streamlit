@@ -151,8 +151,8 @@ fd_long = pd.melt(fd2, id_vars=['Date', 'Year_and_month'])
 st.write(fd_long)
 
 bc = alt.Chart(fd_long).mark_point().encode(
-    x='metric:Q',
-    y='value'
+    x='metric',
+    y='sum()'
 ).interactive()
 
 
