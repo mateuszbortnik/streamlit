@@ -150,4 +150,4 @@ bc = alt.Chart(filtered_data).mark_bar().encode(
     color='site'
 )
 
-mygrid[5][0].altair_chart(bc, use_container_width=False, theme="streamlit")
+mygrid[5][0].altair_chart(bc, use_container_width=False)
