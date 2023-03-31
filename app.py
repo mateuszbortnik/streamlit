@@ -144,11 +144,11 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
 
-fd_long = filtered_data.melt('Date', var_name='metric', value_name='value')
+fd_long = filtered_data.melt(filtered_data.keys(), var_name='metric', value_name='value')
 
 st.write(fd_long)
 
-bc = alt.Chart(filtered_data).mark_point().encode(
+bc = alt.Chart(fd_long).mark_point().encode(
     x='Google_Ads_Spend_Total',
     y='Google_Ads_Revenue_Total',
     color='Origin',
