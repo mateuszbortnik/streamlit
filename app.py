@@ -152,7 +152,7 @@ st.write(fd_long)
 
 bc = alt.Chart(fd_long).mark_point().encode(
     x='Google_Ads_Spend_Total',
-    y='value'
+    y='Google_Ads_Revenue_Total'
 ).interactive()
 
 
