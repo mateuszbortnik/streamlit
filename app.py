@@ -148,11 +148,11 @@ fd_long = filtered_data.melt(filtered_data.keys(), var_name='metric', value_name
 
 st.write(fd_long)
 
-bc = alt.Chart(fd_long).mark_point().encode(
-    x='Google_Ads_Spend_Total',
-    y='Google_Ads_Revenue_Total',
-    color='Origin',
-).interactive()
+# bc = alt.Chart(fd_long).mark_point().encode(
+#     x='Google_Ads_Spend_Total',
+#     y='Google_Ads_Revenue_Total',
+#     color='Origin',
+# ).interactive()
 
 
-mygrid[5][0].altair_chart(bc, use_container_width=False)
+# mygrid[5][0].altair_chart(bc, use_container_width=False)
