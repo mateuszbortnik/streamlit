@@ -152,7 +152,7 @@ st.write(fd_long)
 
 bc = alt.Chart(fd_long).mark_point().encode(
     x='variable',
-    y='sum()'
+    y='value'
 ).interactive()
 
 
