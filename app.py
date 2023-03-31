@@ -146,7 +146,7 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 
 fd2=filtered_data.reset_index()
 
-fd_long = pd.melt(fd2, id_vars='Date')
+fd_long = pd.melt(fd2, id_vars=['Date', 'Year_and_month'])
 
 st.write(fd_long)
 
