@@ -145,8 +145,8 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # st.write(fig4)
 
 bc = alt.Chart(filtered_data).mark_point().encode(
-    x='Google_Ads_Spend_Total',
-    y='Google_Ads_Revenue_Total',
+    x='Google_Ads_Spend_Total:Q',
+    y='Google_Ads_Revenue_Total:Q',
     color='Origin',
 ).interactive()
 
