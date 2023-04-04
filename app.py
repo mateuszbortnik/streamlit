@@ -144,24 +144,12 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
 
-fd2=filtered_data.reset_index()
 
-fd_long = pd.melt(fd2, id_vars=['Date', 'Year_and_month'])
-
-st.write(fd_long)
-
-bc = alt.Chart(fd_long).mark_point().encode(
-    x='variable',
-    y='value'
-).interactive()
-
-
-mygrid[5][0].altair_chart(bc, use_container_width=False)
 
 ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
     x='Facebook_Ads_Revenue_Total',
     y='Facebook_Ads_Spend_Total',
 #     color='Origin',
-#     tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
+    tooltip=['Year_and_month']
 ).interactive()
 mygrid[5][1].altair_chart(ac, use_container_width=False)
