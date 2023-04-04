@@ -161,7 +161,7 @@ ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
 #     color='Origin',
     tooltip=['Year_and_month',xaxis, yaxis]
 ).interactive()
-ac = ac + ac.transform_regression(xaxis, yaxis).mark_line()
+# ac = ac + ac.transform_regression(xaxis, yaxis).mark_line()
 
 mygrid[5][1].altair_chart(ac, use_container_width=True, theme="streamlit")
 
