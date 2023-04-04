@@ -150,10 +150,15 @@ xaxis = mygrid[5][0].selectbox(
     'Select spend channel',
     ('Facebook_Ads_Spend_Total', 'Facebook_Ads_Spend_Prospecting', 'Facebook_Ads_Spend_Remarketing_Brand_Nurturing', 'Facebook_Ads_Spend_not_set', 'Google_Ads_Spend_Total', 'Google_Ads_Spend_Prospecting', 'Google_Ads_Spend_Remarketing_Brand_Nurturing', 'Google_Ads_Spend_not_set'))
 
+yaxis = mygrid[5][0].selectbox(
+    'Select spend channel',
+    ('Facebook_Ads_Revenue_Total', 'Facebook_Ads_Revenue_Prospecting', 'Facebook_Ads_Revenue_Remarketing_Brand_Nurturing', 'Facebook_Ads_Revenue_not_set', 'Google_Ads_Revenue_Total', 'Google_Ads_Revenue_Prospecting', 'Google_Ads_Revenue_Remarketing_Brand_Nurturing', 'Google_Ads_Revenue_not_set'))
+
+
 ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
     x=xaxis,
-    y='Facebook_Ads_Revenue_Total',
+    y=yaxis,
 #     color='Origin',
-    tooltip=['Year_and_month']
+    tooltip=['Year_and_month',xaxis, yaxis]
 ).interactive()
 mygrid[5][1].altair_chart(ac, use_container_width=True, theme="streamlit")
