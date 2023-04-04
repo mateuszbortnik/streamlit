@@ -158,7 +158,9 @@ bc = alt.Chart(fd_long).mark_point().encode(
 
 mygrid[5][0].altair_chart(bc, use_container_width=False)
 
-from vega_datasets import data
-
-source = data.cars()
-st.write(source)
+mygrid[5][1].alt.Chart(filtered_data).mark_circle(size=60).encode(
+    x='Year_and_month',
+    y='Facebook_Ads_Spend_Total',
+#     color='Origin',
+#     tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
+).interactive()
