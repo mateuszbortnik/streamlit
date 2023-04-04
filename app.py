@@ -149,8 +149,8 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 
 
 ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
-    x='Facebook_Ads_Revenue_Total',
-    y='Facebook_Ads_Spend_Total',
+    x='Facebook_Ads_Spend_Total',
+    y='Facebook_Ads_Revenue_Total',
 #     color='Origin',
     tooltip=['Year_and_month']
 ).interactive()
