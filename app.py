@@ -152,4 +152,4 @@ ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
 #     color='Origin',
     tooltip=['Year_and_month']
 ).interactive()
-mygrid[5][1].altair_chart(ac)
+mygrid[5][1].altair_chart(ac, use_container_width=True)
