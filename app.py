@@ -146,10 +146,12 @@ mygrid[4][2].bar_chart(data=filtered_data, x="Year_and_month", y=["Google_Ads_Co
 # sns.heatmap(filtered_data.corr(), ax=ax)
 # st.write(fig4)
 
-
+xaxis = st.selectbox(
+    'Select spend channel',
+    ('Facebook_Ads_Spend_Total', 'Facebook_Ads_Spend_Prospecting', 'Facebook_Ads_Spend_Remarketing_Brand_Nurturing', 'Facebook_Ads_Spend_not_set', 'Google_Ads_Spend_Total', 'Google_Ads_Spend_Prospecting', 'Google_Ads_Spend_Remarketing_Brand_Nurturing', 'Google_Ads_Spend_not_set'))
 
 ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
-    x='Facebook_Ads_Spend_Total',
+    x=xaxis,
     y='Facebook_Ads_Revenue_Total',
 #     color='Origin',
     tooltip=['Year_and_month']
