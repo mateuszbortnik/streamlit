@@ -82,7 +82,14 @@ mygrid[2][1].metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_T
 
 mygrid[2][2].metric(label="Conversions", value=filtered_data['Google_Analytics_Goal_completions_Total'].sum().round(decimals=0))
 
-mygrid[3][0].line_chart(filtered_data, x='Date', y='Google_Ads_Revenue_Total')
+r = alt.Chart(filtered_data).mark_bar().encode(
+    x='Date',
+    y='Google_Ads_Revenue_Total',
+#     color='site'
+)
+mygrid[3][0].altair_chart(r, use_container_width=True, theme="streamlit")
+
+# mygrid[3][0].line_chart(filtered_data, x='Date', y='Google_Ads_Revenue_Total')
 mygrid[3][1].line_chart(filtered_data, x='Date', y='Google_Ads_Spend_Total')
 mygrid[3][2].line_chart(filtered_data, x='Date', y='Google_Analytics_Goal_completions_Total')
 
