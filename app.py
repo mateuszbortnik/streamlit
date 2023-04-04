@@ -159,7 +159,7 @@ bc = alt.Chart(fd_long).mark_point().encode(
 mygrid[5][0].altair_chart(bc, use_container_width=False)
 
 ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
-    x='Year_and_month',
+    x='Facebook_Ads_Revenue_Total',
     y='Facebook_Ads_Spend_Total',
 #     color='Origin',
 #     tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
