@@ -162,3 +162,5 @@ ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
     tooltip=['Year_and_month',xaxis, yaxis]
 ).interactive()
 mygrid[5][1].altair_chart(ac, use_container_width=True, theme="streamlit")
+
+mygrid[5][3].metric(filtered_data[xaxis].corr(filtered_data[yaxis]))
