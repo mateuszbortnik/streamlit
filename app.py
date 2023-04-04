@@ -83,7 +83,7 @@ mygrid[2][1].metric(label="Spend (USD)", value=filtered_data['Google_Ads_Spend_T
 mygrid[2][2].metric(label="Conversions", value=filtered_data['Google_Analytics_Goal_completions_Total'].sum().round(decimals=0))
 
 
-lc = alt.Chart(filtered_data).mark_line(color="red").encode(
+lc = alt.Chart(filtered_data).mark_line(color="green").encode(
     x='Date',
     y='Google_Ads_Revenue_Total'
 )
