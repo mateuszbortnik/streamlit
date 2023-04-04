@@ -163,4 +163,4 @@ ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
 ).interactive()
 mygrid[5][1].altair_chart(ac, use_container_width=True, theme="streamlit")
 
-mygrid[5][2].metric(filtered_data[xaxis].corr(filtered_data[yaxis]))
+mygrid[5][2].metric(label='correlation', value=iltered_data[xaxis].corr(filtered_data[yaxis]))
