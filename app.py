@@ -155,7 +155,7 @@ yaxis = mygrid[5][0].selectbox(
     ('Facebook_Ads_Revenue_Total', 'Facebook_Ads_Revenue_Prospecting', 'Facebook_Ads_Revenue_Remarketing_Brand_Nurturing', 'Facebook_Ads_Revenue_not_set', 'Google_Ads_Revenue_Total', 'Google_Ads_Revenue_Prospecting', 'Google_Ads_Revenue_Remarketing_Brand_Nurturing', 'Google_Ads_Revenue_not_set'))
 
 
-ac = alt.Chart(filtered_data).mark_circle(size=60).encode(
+ac = alt.Chart(filtered_data).mark_circle(size=60, color="red").encode(
     x=xaxis,
     y=yaxis,
 #     color='Origin',
